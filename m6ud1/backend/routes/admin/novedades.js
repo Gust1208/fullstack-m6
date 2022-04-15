@@ -23,7 +23,7 @@ router.get('/agregar', (req,res,next) => {
 
 router.post('/agregar', async(req,res,next)=>{
   try{
-    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
+    if (req.body.titulo != "" && req.body.link != "" ){
       await novedadesModel.insertNovedad(req.body);
       res.redirect('/admin/novedades')
     } else{

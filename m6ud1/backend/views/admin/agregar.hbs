@@ -5,21 +5,16 @@
             <form action="/admin/novedades/agregar" method="post">
                 <div class="mb-3 row">
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="titulo" placeholder="Titulo" name="titulo">
+                        <input type="text" class="form-control" id="titulo" placeholder="titulo" name="titulo">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <div class="col-sm-10">
-                        <textarea type="text" class="form-control" id="subtitulo" placeholder="Subtitulo"
-                            name="subtitulo"></textarea>
+                        <textarea type="text" class="form-control" id="link" placeholder="link"
+                            name="link"></textarea>
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <div class="col-sm-10">
-                        <textarea type="text" class="form-control" id="cuerpo" placeholder="Cuerpo"
-                            name="cuerpo"></textarea>
-                    </div>
-                </div>
+                
                 <button type="submit" class="btn-primary">Guardar</button>
             </form>
             {{#if error}}
