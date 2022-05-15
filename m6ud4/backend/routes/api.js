@@ -15,7 +15,7 @@ router.post('/contacto', async (req,res)=> {
         to: 'gustavodgutierrez@hotmail.com.ar',
         subject: 'Contacto web',
         html:  `${req.body.nombre} se contacto a traves de la web y quiere más 
-        información a este correo: $(req.body.email)<br>ademas hizo el siguiente 
+        información a este correo: ${req.body.email} <br> Además hizo el siguiente 
         comentario: ${req.body.mensaje} <br> Su teléfono es: ${req.body.telefono}`
     }
     const solagro = nodemailer.createSolagro({
@@ -24,13 +24,12 @@ router.post('/contacto', async (req,res)=> {
         auth: {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS
-
         }
     });
 
     await solagro.sendMail(mail)
 
-    res.status(201).json({
+    res.status(201).json ({
         error: false,
         menssage:'Mensaje enviado'
     });

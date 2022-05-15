@@ -1,8 +1,7 @@
-import '../styles/components/pages/ContactoPage.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-
+import '../styles/components/pages/ContactoPage.css';
 
 const ContactoPage = (props) => {
     
@@ -42,9 +41,8 @@ const ContactoPage = (props) => {
 return (
         <main className='holder'>
             <div className='columna de contacto'>
-                <h2>Complete
-                    el siguiente formulario</h2>
-                <form  className='formulario' onSubmit={handleSubmit}>
+                <h2>Complete el siguiente formulario</h2>
+                <form action='/contacto' method='post' className='formulario' onSubmit={handleSubmit}>
                     <p>
                         <label>Nombre </label>
                         <input type='text' name='nombre' value={formData.nombre} onChange ={handleChange} />
